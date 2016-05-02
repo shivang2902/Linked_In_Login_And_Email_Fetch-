@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController" customModule="Taxi2Share" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="1Mt-xF-Oso" id="lVr-fo-8YR"/>
+                <outlet property="webView" destination="M9q-yJ-xf9" id="NbV-Tx-gYY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1Mt-xF-Oso">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZy-X5-7Io">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <items>
+                        <barButtonItem systemItem="stop" id="nOv-Zv-LeR">
+                            <connections>
+                                <action selector="dismiss:" destination="-1" id="EYY-B6-uKI"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9q-yJ-xf9">
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="BTP-hB-g8H"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jZy-X5-7Io" firstAttribute="leading" secondItem="1Mt-xF-Oso" secondAttribute="leading" id="5Mo-s2-JYI"/>
+                <constraint firstAttribute="trailing" secondItem="M9q-yJ-xf9" secondAttribute="trailing" id="5p6-fI-DpO"/>
+                <constraint firstItem="M9q-yJ-xf9" firstAttribute="leading" secondItem="1Mt-xF-Oso" secondAttribute="leading" id="HsY-V6-TZi"/>
+                <constraint firstAttribute="bottom" secondItem="M9q-yJ-xf9" secondAttribute="bottom" id="Jyg-uW-lhC"/>
+                <constraint firstAttribute="trailing" secondItem="jZy-X5-7Io" secondAttribute="trailing" id="LJu-x1-Sao"/>
+                <constraint firstItem="M9q-yJ-xf9" firstAttribute="top" secondItem="jZy-X5-7Io" secondAttribute="bottom" id="MEE-gI-uS0"/>
+                <constraint firstItem="jZy-X5-7Io" firstAttribute="top" secondItem="1Mt-xF-Oso" secondAttribute="top" id="XKh-Zp-i1v"/>
+                <constraint firstItem="M9q-yJ-xf9" firstAttribute="top" secondItem="jZy-X5-7Io" secondAttribute="bottom" id="si0-at-xYf"/>
+            </constraints>
+            <point key="canvasLocation" x="439" y="415"/>
+        </view>
+    </objects>
+</document>
